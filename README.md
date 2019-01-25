@@ -13,7 +13,7 @@ Generating coverage in Maven
 Next steps:
 1. Add labels to the timers on the service methods.
 2. Implement mocks for the service method unit tests instead of hitting the application.
-
+3. Improve health checks and add tests for codeahale.
 
 Health Check
 ---
