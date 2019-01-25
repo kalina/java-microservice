@@ -1,0 +1,6 @@
+logging:
+  appenders:
+    - type: console
+      layout:
+        type: json
+
