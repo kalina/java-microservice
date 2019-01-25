@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>UserServiceConfiguration.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">UserService</a> &gt; <a href="index.source.html" class="el_package">com.example.microservice</a> &gt; <span class="el_source">UserServiceConfiguration.java</span></div><h1>UserServiceConfiguration.java</h1><pre class="source lang-java linenums">package com.example.microservice;
+
+import io.dropwizard.Configuration;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.validator.constraints.*;
+
+<span class="fc" id="L7">public class UserServiceConfiguration extends Configuration {</span>
+
+<span class="fc" id="L9">    @NotEmpty</span>
+    private String defaultFirstName = &quot;Stranger&quot;;
+    
+<span class="fc" id="L12">    @NotEmpty</span>
+    private String defaultLastName = &quot;Still&quot;;
+    
+<span class="fc" id="L15">    @NotEmpty</span>
+    private String defaultZipCode = &quot;97214&quot;;
+    
+<span class="fc" id="L18">    @NotEmpty</span>
+    private String defaultEmail = &quot;strange@gmail.com&quot;;
+
+    @JsonProperty
+    public String getDefaultFirstName() {
+<span class="fc" id="L23">        return defaultFirstName;</span>
+    }
+
+    @JsonProperty
+    public void setDefaultFirstName(String defaultFirstName) {
+<span class="fc" id="L28">        this.defaultFirstName = defaultFirstName;</span>
+<span class="fc" id="L29">    }</span>
+    
+    @JsonProperty
+    public String getDefaultLastName() {
+<span class="fc" id="L33">		return defaultLastName;</span>
+	}
+    
+    @JsonProperty
+	public void setDefaultLastName(String defaultLastName) {
+<span class="fc" id="L38">		this.defaultLastName = defaultLastName;</span>
+<span class="fc" id="L39">	}</span>
+    
+    @JsonProperty
+    public String getDefaultZipCode() {
+<span class="fc" id="L43">		return defaultZipCode;</span>
+	}
+    
+    @JsonProperty
+	public void setDefaultZipCode(String defaultZipCode) {
+<span class="fc" id="L48">		this.defaultZipCode = defaultZipCode;</span>
+<span class="fc" id="L49">	}</span>
+    
+    @JsonProperty
+	public String getDefaultEmail() {
+<span class="fc" id="L53">		return defaultEmail;</span>
+	}
+
+    @JsonProperty
+	public void setDefaultEmail(String defaultEmail) {
+<span class="fc" id="L58">		this.defaultEmail = defaultEmail;</span>
+<span class="fc" id="L59">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
